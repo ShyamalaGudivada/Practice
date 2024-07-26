@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <div class="container"></div>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="Form group">
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form method="post" action='https://register-demo.org'>
+        <fieldset>
+            <div class="Form group">
+            <label for="first-name">Enter Your First Name:</label>
+            <input id="first-name" name="first-name" type="text" required />
+        </div>
+
+        <div class="Form group">
+            <label for="last-name">Enter Your Last Name:</label>
+            <input id="last-name" name="last-name" type="text" required />
+            </div>
+
+            <div class="Form group">
+            <label for="email ">Enter Your Email:</label>
+            <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="Form group">
+            <label for="new-password">Create a New Password:</label>
+            <input id="new-password" name="new-password" type="password" pattern="[a-z0-9]{8,}" required />
+        </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="Form group">
+            <legend>Account Type (required)</legend>
+            <label for="personal-account">
+                <input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal
+            </label>
+            <label for="business-account">
+                <input id="business-account" type="radio" name="account-type" class="inline" /> Business
+            </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="Form group">
+            <label for="profile-picture">Upload a Profile Picture:</label>
+            <input id="profile-picture" type="file" name="file" />
+            </div>
+
+            <div class="Form group">
+            <label for="age">Input Your Age (years):</label>
+            <input id="age" type="number" name="age" min="13" max="120" />
+            </div>
+
+            <div class="Form group">
+            <label for="referrer">How Did You Hear About Us?</label>
+            <select id="referrer" name="referrer">
+                <option value="">(select one)</option>
+                <option value="1">Organisation</option>
+                <option value="2">Friends</option>
+                <option value="3">Social Media</option>
+                <option value="4">Other</option>
+            </div>
+            </select>
+
+            <div class="Form group">
+            <label for="bio">Provide a Bio:</label>
+            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+            </div>
+        </fieldset>
+
+        <label for="terms-and-conditions">
+            <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.register.org/news/terms-of-service/">terms and conditions</a>
+        </label>
+
+        <input type="submit" value="Submit" />
+    </form>
+    </div>
+</body>
+</html>
